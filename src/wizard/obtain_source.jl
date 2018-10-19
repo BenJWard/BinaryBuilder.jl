@@ -225,7 +225,7 @@ function step1(state::WizardState)
     else
         error("Somehow platform_select was not a valid choice!")
     end
-    state.platforms = [typeof(p)(arch(p); libc=libc(p), call_abi=call_abi(p), compiler_abi=CompilerABI(:gcc7)) for p in state.platforms]
+    state.platforms = [typeof(p)(arch(p); libc=libc(p), call_abi=call_abi(p), compiler_abi=CompilerABI(:gcc8)) for p in state.platforms]
     println(state.outs)
 end
 
